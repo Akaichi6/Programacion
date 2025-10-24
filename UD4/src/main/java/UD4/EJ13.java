@@ -7,6 +7,8 @@ public class EJ13 {
         Scanner sc = new Scanner(System.in);
         System.out.println("Escribe la distancia en millas: ");
         double millas = sc.nextDouble();
-        double metros = millas * 0.1;
+        double metros = millas * 1852;
+        System.out.println("La distancia en metros es (Println): " + metros);
+        System.out.printf("La distancia en metros es: %.3f", metros);
     }
 }

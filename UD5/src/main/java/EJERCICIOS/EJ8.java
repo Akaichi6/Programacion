@@ -7,6 +7,18 @@ public class EJ8 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         System.out.println("Introduce un numero: ");
+        double num1 = sc.nextDouble();
+        System.out.println("Introduce un numero: ");
+        double num2 = sc.nextDouble();
+        if (num1 != num2) {
+           if (num1 % 1==0 && num2 % 1==0){
+               System.out.println(num1);
+               System.out.println(num2);
+           }
+
+        } else { num1 = num2;
+            System.err.println("error");
+        }
 
     }
 }

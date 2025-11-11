@@ -1,4 +1,4 @@
-package EJERCICIOS.EJ5_2;
+package EJERCICIOS.EJ5_2.PARTE_A;
 
 public class EJ3 {
     public static void main(String[] args) {

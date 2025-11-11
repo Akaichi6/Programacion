@@ -1,4 +1,4 @@
-package EJERCICIOS;
+package EJERCICIOS.EJ5_1;
 //Escribe un programa que lee dos números y los visualiza en orden descendente
 import java.util.Scanner;
 

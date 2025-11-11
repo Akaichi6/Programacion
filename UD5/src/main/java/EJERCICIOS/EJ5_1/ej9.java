@@ -1,6 +1,5 @@
-package EJERCICIOS;
+package EJERCICIOS.EJ5_1;
 
-import java.util.Locale;
 import java.util.Scanner;
 
 public class ej9 {

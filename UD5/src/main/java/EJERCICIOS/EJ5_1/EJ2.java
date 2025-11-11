@@ -1,8 +1,7 @@
-package EJERCICIOS;
+package EJERCICIOS.EJ5_1;
 // Escribe un programa que pide la edad por teclado y nos muestra el mensaje de “eres mayor de
 //edad” o el mensaje de “eres menor de edad”.
 
-import javax.swing.*;
 import java.util.Scanner;
 
 public class EJ2 {

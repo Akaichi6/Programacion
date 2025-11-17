@@ -6,86 +6,63 @@ public class EJ15 {
     public static void main(String[] args) throws InterruptedException {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce las horas (0-23): ");
-        int hora = sc.nextInt();
-        System.out.println("Introduce los minutos (0-59): ");
-        int minuto = sc.nextInt();
-        System.out.println("Introduce las segundos (0-59): ");
-        int segundos = sc.nextInt();
+        System.out.println("Introduce las horas HH:MM:SS : ");
+        String time = sc.nextLine();
+        while (true) {
+        String horacort = time.substring(0, 2);
+        String mincort = time.substring(3, 5);
+        String seguncort = time.substring(6, 8);
 
-        while (true){
+        int hora = Integer.parseInt(horacort);
+        int minuto = Integer.parseInt(mincort);
+        int segundos = Integer.parseInt(seguncort);
 
+            if (hora>= 0 && hora < 23){
+                if(minuto >= 0 && minuto < 60){
+                    if(segundos >= 0 && segundos < 60){
 
-            if (hora < 0 && hora > 23 ){
-                System.out.println("Valor introducido incorrecto");
-                System.out.println("Introduce las horas (0-23): ");
-                int hora2 = sc.nextInt();
+                            Thread.sleep(1000);
+                            segundos++;
+                            if (segundos > 59) {
+                                segundos = 00;
 
-            }
+                                minuto = minuto + 1;
+                            }
+                            if (minuto > 59) {
+                                minuto = 00;
+                                hora = hora + 1;
 
-            if (minuto < 0 || minuto > 59) {
-                System.out.println("Valor introducido incorrecto");
-                System.out.println("Introduce los minutos (0-59): ");
-                int minuto2 = sc.nextInt();
+                            }
+                            if (hora > 23) {
+                                hora = 00;
 
-            }
-
-            if (segundos < 0 || segundos > 59) {
-                System.out.println("Valor introducido in correcto");
-                System.out.println("Introduce las segundos (0-59): ");
-                int segundos2 = sc.nextInt();
-
-
-            } else {
-                    System.out.println("Error: valores fuera de rango.");
-                    System.out.println("Introduce las horas (0-23): ");
-                    int hora2 = sc.nextInt();
-                    System.out.println("Introduce los minutos (0-59): ");
-                    int minuto2 = sc.nextInt();
-                    System.out.println("Introduce las segundos (0-59): ");
-                    int segundos2 = sc.nextInt();
-
-                    while (true){
-
-                        Thread.sleep(1000);
-                        segundos++;
-                        if (segundos2 >= 59){
-                            segundos2 = 00;
-
-                            minuto2 = minuto2 + 1;
-                        } if (minuto2 >= 59) {
-                            minuto2 = 00;
-                            hora2 = hora2 + 1;
-
-                        } if (hora2 >= 23) {
-                            hora2 = 00;
-
-                        }
-                        System.out.printf("%02d:%02d:%02d%n", hora, minuto, segundos);
+                            }
+                            System.out.printf("%02d:%02d:%02d%n", hora, minuto, segundos);
+                    }else {
+                        System.out.println("Error segundos mal introducidos");
+                        System.out.println("Introduce las horas HH:MM:SS : ");
+                        time = sc.nextLine();
                     }
 
+                }else {
+                    System.out.println("Error minutos mal introduidos");
+                    System.out.println("Introduce las horas HH:MM:SS : ");
+                    time = sc.nextLine();
+                    }
+            }else {
+                System.out.println("Error horas mal introducidas");
+                System.out.println("Introduce las horas HH:MM:SS : ");
+                time = sc.nextLine();
             }
 
-
-        while (true){
-
-            Thread.sleep(1000);
-            segundos++;
-            if (segundos >= 59){
-                segundos = 00;
-
-                minuto= minuto + 1;
-            } if (minuto >= 59) {
-                minuto = 00;
-                hora = hora + 1;
-
-            } if (hora >= 23) {
-                hora = 00;
-
-            }
-            System.out.printf("%02d:%02d:%02d%n", hora, minuto, segundos);
         }
+
+
+
+
+
+
 
     }
 }
-}
+

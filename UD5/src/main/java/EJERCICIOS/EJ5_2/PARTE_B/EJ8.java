@@ -12,16 +12,17 @@ public class EJ8 {
         System.out.println("Introduce N2: ");
         double n2 = sc.nextDouble();
 
-        double contador = 0;
 
-        while (n2 > n1){
-            if (n2 > n1);{
+        while (n1 > n2){
+            System.out.println("N2 debe ser mayor que N1, vuelve a introducir N2:  ");
+            n2 = sc.nextDouble();
+        }
+        int contador = 0;
+
+        while (n2 > n1 && contador < n2) {
                 contador++;
-                System.out.println(contador);
-            }
-            if(n1>n2){
-                System.out.println("EL N2 debe de ser mayor a EL N1, vuelve a introducirlo");
-            }
+                System.out.printf(" %d\t", contador);
+
 
         }
 

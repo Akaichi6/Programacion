@@ -8,24 +8,29 @@ public class EJ8 {
 
 
         System.out.println("Introduce N1: ");
-        double n1 = sc.nextDouble();
+        int n1 = sc.nextInt();
         System.out.println("Introduce N2: ");
-        double n2 = sc.nextDouble();
+        int n2 = sc.nextInt();
 
 
-        while (n1 > n2){
+        while (n1 >= n2){
             System.out.println("N2 debe ser mayor que N1, vuelve a introducir N2:  ");
-            n2 = sc.nextDouble();
+            n2 = sc.nextInt();
         }
-        int contador = 0;
+        int contador = n1 -1;
+        int pares = 0;
 
         while (n2 > n1 && contador < n2) {
                 contador++;
+                if(contador % 2 == 0){
+                    pares++;
+                }
+
                 System.out.printf(" %d\t", contador);
 
 
         }
-
+        System.out.printf("\nLa cantidad de pares es: %d", pares);
 
     }
 

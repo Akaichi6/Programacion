@@ -8,10 +8,24 @@ public class EJ3 {
 
         System.out.println("Introduce un numero entero positivo: ");
         int numero=sc.nextInt();
+        int contador=1;
+        while (contador<numero){
+            contador++;
+            if (contador>0){
+                if (contador%2==0){
+                    System.out.printf("%d\t",contador);
+                    contador++;
 
-        if
+                }//else {
 
+                   // contador++;
+               // }
 
-
+            }
+        }
     }
+
+
+
 }
+

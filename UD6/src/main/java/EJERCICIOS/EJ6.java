@@ -13,8 +13,10 @@ public class EJ6 {
         final int TAMANYO = N;
         int[] numero = new int[TAMANYO];
 
-        //for (int i=0; i < numero; i++){
-            System.out.println("M" + Arrays.toString(numero));
-        //}
+        for (int i=0; i < TAMANYO; i++){
+          numero[i] = M;
+
+        }
+        System.out.println( Arrays.toString(numero));
     }
 }

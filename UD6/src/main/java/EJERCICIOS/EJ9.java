@@ -12,17 +12,22 @@ public class EJ9 {
         int [] dimension = new int [TAMAIO];
 
         for (int i = 0; i < TAMAIO; i++) {
-            dimension [i]= (int) (1 + Math.random()*10);
+            dimension [i]= (int) (1 + Math.random() * 10);
         }
+
         System.out.println(Arrays.toString(dimension));
 
         System.out.println("Introduce un numero: ");
         int N = sc.nextInt();
 
         for (int i = 0; i < TAMAIO; i++) {
-            if(dimension[i]==N){
+
+            if(dimension[i] == N){
+
+                System.out.printf("%d\t",i +1);
 
             }
         }
+
     }
 }

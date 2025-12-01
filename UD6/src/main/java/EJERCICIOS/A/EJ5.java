@@ -1,6 +1,5 @@
-package EJERCICIOS;
+package EJERCICIOS.A;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class EJ5 {

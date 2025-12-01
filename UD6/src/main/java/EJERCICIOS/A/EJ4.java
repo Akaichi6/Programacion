@@ -1,33 +1,31 @@
-package EJERCICIOS;
+package EJERCICIOS.A;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
-public class EJ4_WHILE {
+public class EJ4 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        final int TAMANYO = 5;
+        final int TAMANYO = 20;
         int[] numero = new int[TAMANYO]; // esto es el array
         int positivos = 0;
         int negativos = 0;
 
-        int i = 0;
-        while (i < numero.length)
+
+        for (int i = 0; i < numero.length; i++)
         {
             System.out.println("Introduce un numero reales: ");
             numero[i] = sc.nextInt();
 
-
             if (numero[i] > 0){
-                positivos += numero[i];
+            positivos += numero[i];
 
             }
             else {
                 negativos += numero[i];
 
             }
-            i++;
         }
         System.out.println("Los positivos son: " + positivos);
         System.out.println("Los negativos son: " + negativos);
@@ -37,3 +35,5 @@ public class EJ4_WHILE {
     }
 
 }
+
+

@@ -7,7 +7,7 @@ public class EJ2 {
     public static void main(String[] args) {
         ArrayList <Integer> dimension = new ArrayList();
         Random rand = new Random();
-         final int TAMANYO_MIN = 10;
+        final int TAMANYO_MIN = 10;
         final int TAMANYO_MAX = 20;
         final int NUM_MAX_RANDOM = 100;
         int suma = 0;

@@ -1,4 +1,4 @@
-package EJERCICIOS.DINAMICAS;
+package EJERCICIOS.DINAMICAS.LISTAS;
 
 import java.util.ArrayList;
 import java.util.Collections;

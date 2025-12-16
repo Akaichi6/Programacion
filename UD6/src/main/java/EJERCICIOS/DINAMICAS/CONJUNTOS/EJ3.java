@@ -8,7 +8,7 @@ import java.util.TreeSet;
 public class EJ3 {
     public static void main(String[] args) {
         Random rand = new Random();
-        TreeSet <Integer> ts1 = new TreeSet<>();
+        TreeSet <Integer> ts1 = new TreeSet<>(Collections.reverseOrder());
 
         final int NUM_MAX_RANDOM = 20;
         final int TAMANYO_CONJUNTOS = 10;
@@ -17,10 +17,7 @@ public class EJ3 {
             ts1.add(rand.nextInt(NUM_MAX_RANDOM));
 
         }
-        System.out.println(ts1.size());
-        ArrayList<Integer> lista_invertida = new ArrayList <>(ts1);
-        Collections.reverse(lista_invertida);
-        System.out.println("Conjunto ordenado(decreciente y no repetidos): " + lista_invertida);
+        System.out.println("Conjunto ordenado(decreciente y no repetidos): " + ts1);
 
     }
 }

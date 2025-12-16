@@ -10,13 +10,13 @@ public class EJ5 {
         Scanner st = new Scanner(System.in);
         LinkedHashSet<String> t1 = new LinkedHashSet<>();
         
-        final String clave  = "fin";
+        final String CLAVE  = "fin";
         System.out.println("Introduce nombres (escribe 'fin' para terminar): ");
         String nombre =  st.nextLine();
         
         
 
-            while(!nombre.equalsIgnoreCase("fin"))
+            while(!nombre.equalsIgnoreCase(CLAVE))
             {
                 t1.add(nombre);
                 nombre = st.nextLine();

@@ -9,18 +9,18 @@ public class EJ6 {
         Scanner st = new Scanner(System.in);
         TreeSet<String> t1 = new TreeSet<>();
 
-        final String clave  = "fin";
+        final String CLAVE  = "fin";
         System.out.println("Introduce nombres (escribe 'fin' para terminar): ");
-        String nombre =  st.nextLine();
-        nombre = nombre.toUpperCase();
+        String nombre =  st.nextLine().toUpperCase();
 
 
-        while(!nombre.equalsIgnoreCase("fin"))
+
+        while(!nombre.equalsIgnoreCase(CLAVE))
         {
             t1.add(nombre);
-            nombre = st.nextLine();
-            nombre = nombre.toUpperCase();
+            nombre = st.nextLine().toUpperCase();
         }
-        System.out.println("El conjunto de nombres no ordenados: " + t1);
+        System.out.println("El conjunto de nombres ordenados alfabeticamente: " + t1);
+
     }
 }

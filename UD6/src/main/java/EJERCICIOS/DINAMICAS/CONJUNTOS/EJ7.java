@@ -16,14 +16,39 @@ public class EJ7 {
         String frase = sc.nextLine().toLowerCase();
         String[] palabras = frase.split(" ");
 
-        List <String> miLista = new ArrayList<String>(vistos);
-
-        for (String palabra : palabras)
+        for (String palabra_ext : palabras)
         {
+            int contador = 0;
+            for (String palabra_int : palabras)
+            {
 
+                if (palabra_ext.equals(palabra_int))
+                {
+                    contador++;
+
+                }
+                if (contador == 1)
+                {
+                    no_repetidos.add(palabra_ext);
+
+                }
+                if (contador > 1)
+                {
+                    repetidos.add(palabra_ext);
+                    no_repetidos.remove(palabra_ext);
+                }
+
+            }
         }
 
-        int repeticiones = Collections.frequency(miLista,palabras);
+        System.out.println("Repetidas: " + repetidos);
+        System.out.println("No repetidos: " + no_repetidos);
+        }
+
+
+}
+
+
 
 
     /*
@@ -42,7 +67,7 @@ public class EJ7 {
         System.out.println("Palabras no repetidas: " + no_repetidos);
     */
 
-    }
 
-}
+
+
 

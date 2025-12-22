@@ -1,20 +1,59 @@
 package EJERCICIOS.DINAMICAS.CONJUNTOS;
 
-import java.util.LinkedHashSet;
-import java.util.Scanner;
-import java.util.TreeSet;
+import java.util.*;
+
+import java.util.Collections;
+
 
 public class EJ7 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         TreeSet<String> no_repetidos = new TreeSet<>();
         TreeSet<String> repetidos = new TreeSet<>();
-        TreeSet<String> vistos = new TreeSet<>();
+        Set<String> vistos = new TreeSet<>();
 
         System.out.println("Introduce una frase:");
         String frase = sc.nextLine().toLowerCase();
         String[] palabras = frase.split(" ");
+
+        for (String palabra_ext : palabras)
+        {
+            int contador = 0;
+            for (String palabra_int : palabras)
+            {
+
+                if (palabra_ext.equals(palabra_int))
+                {
+                    contador++;
+
+                }
+                if (contador == 1)
+                {
+                    no_repetidos.add(palabra_ext);
+
+                }
+                if (contador > 1)
+                {
+                    repetidos.add(palabra_ext);
+                    no_repetidos.remove(palabra_ext);
+                }
+
+            }
+        }
+
+        System.out.println("Repetidas: " + repetidos);
+        System.out.println("No repetidos: " + no_repetidos);
+        }
+
+
+}
+
+
+
+
+    /*
         for (String palabra : palabras) {
+
             if (!vistos.add(palabra)) {
                 repetidos.add(palabra);
                 no_repetidos.remove(palabra);
@@ -26,8 +65,9 @@ public class EJ7 {
 
         System.out.println("Palabras repetidas: " + repetidos);
         System.out.println("Palabras no repetidas: " + no_repetidos);
+    */
 
-    }
 
-}
+
+
 

@@ -21,22 +21,19 @@ public class EJ2 {
                     frase = sc.nextLine().toLowerCase();
 
             }
-        for (int i = 0; i < palabras_separadas.length; i++) {
-            String palabra = palabras_separadas[i];
+            for (int i = 0; i < palabras_separadas.length; i++)
+            {
+                String palabra = palabras_separadas[i];
 
-            if (!palabras_totales.containsKey(palabra)) {
-                palabras_totales.put(palabra, new ArrayList<>());
+                if (!palabras_totales.containsKey(palabra)) {
+                    palabras_totales.put(palabra, new ArrayList<>());
+                }
+
+                palabras_totales.get(palabra).add(i + 1);
             }
-
-            palabras_totales.get(palabra).add(i + 1);
-        }
-
-        System.out.println("Posiciones de las palabras:");
-        for (String palabra : palabras_totales.keySet()) {
-            System.out.println(palabra + "=" + palabras_totales.get(palabra));
-        }
-
-
-
+            System.out.println("Posiciones de las palabras:");
+            for (String palabra : palabras_totales.keySet()) {
+                System.out.println(palabra + "=" + palabras_totales.get(palabra));
+            }
     }
 }

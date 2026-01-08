@@ -21,10 +21,10 @@ public class EJ8 {
 
 
         for (String s : original_separados) {
-            original1.add(Integer.parseInt(s));
+            original1.add(Integer.parseInt(s.trim()));
         }
         for (String s : original_separados2) {
-            original2.add(Integer.parseInt(s));
+            original2.add(Integer.parseInt(s.trim()));
         }
 
         TreeSet<Integer> combinado = new TreeSet<>(original1);

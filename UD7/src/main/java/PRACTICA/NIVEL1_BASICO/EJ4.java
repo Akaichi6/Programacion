@@ -1,4 +1,4 @@
-package PRACTICA;
+package PRACTICA.NIVEL1_BASICO;
 
 import java.util.Scanner;
 

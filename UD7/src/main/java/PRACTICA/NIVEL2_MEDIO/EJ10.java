@@ -6,7 +6,7 @@ public class EJ10 {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Introduce la fecha: ");
+        System.out.println("Introduce la fecha ");
         System.out.println("Introduce el dia: ");
         int dia = sc.nextInt();
         System.out.println("Introduce la mes: ");
@@ -14,8 +14,12 @@ public class EJ10 {
         System.out.println("Introduce el año: ");
         int anio = sc.nextInt();
 
+        if (formatofecha(dia,mes,anio)){
+            System.out.println(" El formato de la fecha " + dia + "/" + mes + "/" + anio + " es correcto" );
+        }  else {
+            System.out.println(" El formato de la fecha " + dia + "/" + mes + "/" + anio + " es incorrecto" );
+        }
 
-        System.out.println(" El forato de la fecha " + dia + "/" + mes + "/" + anio + " es " + formatofecha(dia,mes,anio));
     }
     public  static boolean formatofecha(int dia,int mes,int anio){
         if (dia <= 30 && dia >= 1 && mes >= 1 && mes <= 12 && anio >= 1900 && anio <= 2100){

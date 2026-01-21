@@ -2,11 +2,13 @@ package EJERCICIOS.DINAMICAS.CONJUNTOS.REPETIDOS;
 
 import java.util.LinkedHashSet;
 import java.util.Scanner;
+import java.util.TreeSet;
 
-public class EJ5_REPETIDO {
+public class EJ6_REPETIDO {
     public static void main(String[] args) {
+
         Scanner sc = new Scanner(System.in);
-        LinkedHashSet<String> set = new LinkedHashSet<>();
+        TreeSet<String> set = new TreeSet<>();
 
         String CLAVE = "fin";
 
@@ -18,5 +20,6 @@ public class EJ5_REPETIDO {
             nombres = sc.nextLine();
         }
         System.out.println("El conjunto de nombres no ordenados: " + set);
+
     }
 }

@@ -11,7 +11,7 @@ public class EJ2 {
             int columnas;
             int posicion_i=-1;
             int posicion_j=-1;
-            int numero_menor=0;
+            int num_min=0;
 
             System.out.print("Introduce el numero de filas: ");
             filas=leer.nextInt();
@@ -33,15 +33,15 @@ public class EJ2 {
                 for (int j=0;j<columnas;j++){
                     System.out.print(matriz[i][j]+"\t");
 
-                    if (matriz[i][j]<numero_menor){
-                        numero_menor=matriz[i][j];
+                    if (matriz[i][j]<num_min){
+                        num_min=matriz[i][j];
                         posicion_j=j;
                         posicion_i=i;
                     }
                 }
                 System.out.println("");
             }
-        System.out.println("El Numero mas pequeño es: "+ numero_menor +" en la posicion ("+posicion_i+","+posicion_j+")");
+        System.out.println("El Numero mas pequeño es: "+ num_min +" en la posicion ("+posicion_i+","+posicion_j+")");
 
     }
 }

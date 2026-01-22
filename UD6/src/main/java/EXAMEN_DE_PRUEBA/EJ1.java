@@ -24,19 +24,19 @@ public class EJ1 {
                     tamanio_palabra = palabra_mas_larga.length();
                 }
             }
-            boolean tieneo = false;
-            int contadorO = 0;
+           boolean tiene_o = false;
+            int contador_o = 0;
             for (int i = 0; i < palabra_mas_larga.length(); i++) {
                 if (palabra_mas_larga.charAt(i) == 'o') {
-                    contadorO++;
-                    tieneo = true;
+                    contador_o++;
+                    tiene_o = true;
                 }
             }
 
             System.out.println("Numero total de palabras: " + secuencia_palabras.length);
             System.out.println(" La Palabra más larga es: " + palabra_mas_larga + " y su Tamaño es de: " + tamanio_palabra + " letras");
-            System.out.println(" La palabra tiene 'o'? "+ tieneo);
-            System.out.println(" EL numero de 'o' que tiene la palabra es: " + contadorO);
+            System.out.println(" La palabra tiene 'o'? "+ tiene_o);
+            System.out.println(" EL numero de 'o' que tiene la palabra es: " + contador_o);
 
         }
 

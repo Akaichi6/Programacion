@@ -6,24 +6,37 @@ public class EJ1 {
 
         public static void main(String[] args) {
 
-            Scanner leer=new Scanner(System.in);
-            String frase;
+            Scanner leer = new Scanner(System.in);
+
+            System.out.print("Introdece una frase: ");
+            String frase = leer.nextLine().toLowerCase();
+
+            int tamanio_palabra = 0;
             String palabra;
             String palabra_mas_larga = "";
-            int longitud = 0;
-            System.out.print("Introdece una frase: ");
-            frase=leer.nextLine();
-            String[] cadena=frase.split(" ");
-            for (int cont=0;cont<cadena.length;cont++){
-                palabra=cadena[cont];
-                if(palabra.length()>palabra_mas_larga.length()){
-                    palabra_mas_larga=palabra;
-                    longitud=palabra_mas_larga.length();
+
+            String[] secuencia_palabras = frase.split(" ");
+
+            for (int i = 0; i < secuencia_palabras.length; i++) {
+                palabra = secuencia_palabras[i];
+                if (palabra.length() > palabra_mas_larga.length()) {
+                    palabra_mas_larga = palabra;
+                    tamanio_palabra = palabra_mas_larga.length();
                 }
             }
-            System.out.println("Numero total de palabras: "+cadena.length);
-            System.out.println("Palabra más larga: "+palabra_mas_larga+" (Longitud: "+longitud+")");
+           boolean tiene_o = false;
+            int contador_o = 0;
+            for (int i = 0; i < palabra_mas_larga.length(); i++) {
+                if (palabra_mas_larga.charAt(i) == 'o') {
+                    contador_o++;
+                    tiene_o = true;
+                }
+            }
 
+            System.out.println("Numero total de palabras: " + secuencia_palabras.length);
+            System.out.println(" La Palabra más larga es: " + palabra_mas_larga + " y su Tamaño es de: " + tamanio_palabra + " letras");
+            System.out.println(" La palabra tiene 'o'? "+ tiene_o);
+            System.out.println(" EL numero de 'o' que tiene la palabra es: " + contador_o);
 
         }
 

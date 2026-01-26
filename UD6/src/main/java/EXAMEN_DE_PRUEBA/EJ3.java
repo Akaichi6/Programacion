@@ -1,13 +1,16 @@
 package EXAMEN_DE_PRUEBA;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Scanner;
 
 public class EJ3 {
     public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
         ArrayList<Integer> lista = new ArrayList<>();
         ArrayList<Integer> lista_invertida = new ArrayList<>();
 
-        String numeros_comprobacion=" 50,   60, 12, -65   ,0,   57,-21,-15 ,  -64  ";
+        System.out.println("poc ");
+        String numeros_comprobacion= sc.nextLine();      //" 50,   60, 12, -65   ,0,   57,-21,-15 ,  -64  ";
 
         String[] numeros_separados = numeros_comprobacion.split(" ");
         String[] numeros_sin_espacios;

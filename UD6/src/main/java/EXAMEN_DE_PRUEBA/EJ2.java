@@ -7,17 +7,15 @@ public class EJ2 {
         Scanner leer=new Scanner(System.in);
 
             int aleatorio;
-            int filas;
-            int columnas;
             int posicion_i=-1;
             int posicion_j=-1;
             int num_min=0;
 
             System.out.print("Introduce el numero de filas: ");
-            filas=leer.nextInt();
+             int filas=leer.nextInt();
 
             System.out.print("Ingresa el numero de columnas: ");
-            columnas=leer.nextInt();
+            int columnas=leer.nextInt();
 
             int[][] matriz=new int[filas][columnas];
 

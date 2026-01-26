@@ -18,12 +18,15 @@ public class EJ1 {
             String[] secuencia_palabras = frase.split(" ");
 
             for (int i = 0; i < secuencia_palabras.length; i++) {
+
                 palabra = secuencia_palabras[i];
+
                 if (palabra.length() > palabra_mas_larga.length()) {
                     palabra_mas_larga = palabra;
                     tamanio_palabra = palabra_mas_larga.length();
                 }
             }
+
            boolean tiene_o = false;
             int contador_o = 0;
             for (int i = 0; i < palabra_mas_larga.length(); i++) {

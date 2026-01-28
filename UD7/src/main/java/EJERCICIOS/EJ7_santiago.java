@@ -37,7 +37,7 @@ public class EJ7_santiago {
         } else {
             System.out.println("El inventario contiene los siguientes errores:");
             for (String error : listaErrores1) {
-                System.out.println("- " + error);
+                System.out.println("-> " + error);
             }
         }
         List<String> listaErrores2 = validarInventario(inventario2);
@@ -48,7 +48,7 @@ public class EJ7_santiago {
         } else {
             System.out.println("El inventario contiene los siguientes errores:");
             for (String error : listaErrores2) {
-                System.out.println("- " + error);
+                System.out.println("-> " + error);
             }
         }
 

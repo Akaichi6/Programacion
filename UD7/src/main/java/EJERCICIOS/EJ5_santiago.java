@@ -1,9 +1,8 @@
 package EJERCICIOS;
 
-import java.lang.reflect.Array;
 import java.util.*;
 
-public class EJ5 {
+public class EJ5_santiago {
     public static void main(String[] args) {
 
          ArrayList<String> empresas = new ArrayList<>(Arrays.asList("Uber","Apple","Ikea", "Oracle", "Iberdrola", "Endesa",

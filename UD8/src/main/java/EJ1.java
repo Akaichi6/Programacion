@@ -15,14 +15,13 @@ public class EJ1 {
                 System.out.print("Introduce un valor entero A: ");
                 entero_a = sc.nextInt();
 
-
                 System.out.println("Valor introducido: " + entero_a);
                 leidoCorrectamente = true;
+
             } catch (InputMismatchException e) {
 
                 System.out.println("Valor introducido incorrecto");
                 errores++;
-
 
                 sc.nextLine();
             }

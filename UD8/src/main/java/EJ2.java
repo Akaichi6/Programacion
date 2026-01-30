@@ -30,9 +30,6 @@ public class EJ2 {
                 System.out.println("Valor introducido incorrecto");
 
             }
-            catch (ArithmeticException e) {
-                System.out.println("La division no puede ser entre 0");
-            }
 
 
     }

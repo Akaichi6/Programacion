@@ -29,7 +29,6 @@ public class EJ5 {
             dividendo = numeros[dividendo -1];
             System.out.println("Dividendo: " + dividendo);
 
-
             divisor = numeros[divisor -1];
             System.out.println("Divisor: " + divisor);
 

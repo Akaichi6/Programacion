@@ -8,12 +8,15 @@
         <outputRelativeToContentRoot value="true" />
         <module name="UD8" />
         <module name="UD7" />
+        <module name="UD9" />
         <module name="UD4" />
         <module name="UD6" />
         <module name="UD5" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="EJERCICIOS" target="21" />
+      <module name="EJERCICIOS_A" target="21" />
       <module name="Entornos" target="21" />
     </bytecodeTargetLevel>
   </component>

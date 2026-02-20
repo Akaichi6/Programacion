@@ -47,7 +47,28 @@ public class Persona {
     }
 
     public void imprime(){
-
-
+        System.out.print("" +
+                "\n DNI: " + dni
+                + "\n Nombre: " + nombre
+                + "\n Apellido: " + apellido
+                + "\n Edad: " + edad);
+    }
+    public boolean esMayorEdad(){
+        boolean mayor = false;
+        if(edad>18){
+            mayor = true;
+        }
+        return mayor;
+    }
+    public boolean esJubilado(){
+        boolean jubilado = false;
+        if(edad>=65){
+            jubilado = true;
+        }
+        return jubilado;
+    }
+    public int diferenciaEdad(Persona p){
+        int resta = this.edad-p.edad;
+        return Math.abs(resta);
     }
 }

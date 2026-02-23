@@ -18,6 +18,8 @@ public class Persona {
         this.edad = edad;
     }
 
+
+
     public String getDni() {
         return dni;
     }

@@ -1,8 +1,10 @@
 package EJERCICIOS_E;
 
+import java.util.Scanner;
+
 public class Persona {
 
-        private final String dni;
+        private static String dni;
         private String nombre;
         private String apellido;
         private int edad;
@@ -13,6 +15,7 @@ public class Persona {
             this.nombre = nombre;
             this.apellido = apellido;
             this.edad = edad;
+
         }
 
 
@@ -65,11 +68,17 @@ public class Persona {
             int resta = this.edad-p.edad;
             return Math.abs(resta);
         }
-        public static boolean validarDNI(String dni){
-            boolean valido = false;
-            if(dni.length()==11){
-
+        public static boolean validarDNI(){
+            Scanner  sc = new Scanner(System.in);
+            boolean valido;
+            System.out.println("Ingrese DNI:");
+            dni = sc.nextLine();
+            if( dni.matches("^[0-9]{8}[a-zA-Z]")){
+                valido = true;
+            }else {
+                valido = false;
             }
+            System.out.println(valido);
             return valido;
         }
 }

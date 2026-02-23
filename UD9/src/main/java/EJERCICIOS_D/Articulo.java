@@ -78,8 +78,10 @@ public class Articulo {
         int  cuantos_quedan = cuantosQuedan - unidades_requeridas;
         if (cuantosQuedan <= 0 && cuantosQuedan >= unidades_requeridas) {
             resultado = false;
+            System.out.println( "las unidades que quedan: " + resultado);
         }
         return resultado;
+
     }
     public boolean comprar (){
         Scanner sc = new Scanner(System.in);

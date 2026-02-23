@@ -2,6 +2,7 @@ package EJERCICIOS_D;
 
 public class Main {
     public static void main(String[] args) {
+
         Persona p1 = new Persona("46084137A","Santiago", "Palacios Navarro",28);
         Persona p2 = new Persona("22126577W","Jose","Palacios Perez",67);
 
@@ -20,6 +21,19 @@ public class Main {
         System.out.println(" La persona es  jubilado/a: " + p2.esJubilado());
         p2.diferenciaEdad(p1);
         System.out.println(" La diferencia de edad entre las personas es: " + p2.diferenciaEdad(p1));
+
+        Articulo a1 = new Articulo("Detergente Ariel", 12.99, 21, 20);
+        Articulo a2 = new Articulo("Saco Patatas", 8.99, 10, 100);
+
+        a1.imprimir();
+        a1.getPVP();
+        a1.vender();
+        a1.comprar();
+
+        a2.imprimir();
+        a2.getPVP();
+        a2.vender();
+        a2.comprar();
 
     }
 }

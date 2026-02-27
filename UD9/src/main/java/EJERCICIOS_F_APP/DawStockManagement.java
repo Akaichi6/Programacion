@@ -1,6 +1,6 @@
 package EJERCICIOS_F_APP;
 
-import static Practicas.P4_AppStockManagement.CargarDatos.precargaDatos;
+import static EJERCICIOS_F_APP.CargarDatos.precargaDatos;
 
 public class DawStockManagement {
 
@@ -9,7 +9,7 @@ public class DawStockManagement {
     public static void main(String[] args) {
 
         try {
-            AppStock empresa = new AppStock(NOMBRE_EMPRESA);
+            App empresa = new App(NOMBRE_EMPRESA);
 
             //Precarga de datos almacenados
             precargaDatos(empresa);

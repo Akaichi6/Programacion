@@ -9,7 +9,7 @@ package EJERCICIOS_F_APP;
  */
 public class CargarDatos {
 
-    public static void precargaDatos(AppStock empresa){
+    public static void precargaDatos(App empresa){
 
         Cuenta cta1 = new Cuenta("11111111A", Departamento.MARKETING);
         cta1.alta(new Producto("Canon", "Cámara réflex EOS 250D", 749.00));

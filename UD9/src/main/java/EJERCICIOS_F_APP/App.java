@@ -1,8 +1,7 @@
 package EJERCICIOS_F_APP;
 
-import java.util.Collection;
-import java.util.Scanner;
-import java.util.Set;
+import java.util.*;
+
 //atributos
 public class App {
     //ATRIBUTOS
@@ -16,6 +15,7 @@ public class App {
 
     public App(String nombreEmpresa) {
         this.nombreEmpresa = nombreEmpresa;
+        this.cuentas = new HashSet<>();
     }
 
     public Set<Cuenta> getCuentas() {
@@ -39,13 +39,14 @@ public class App {
 
      for ( int i = 0; i < 3; i++ ) {
 
-             System.out.println("introduce el usuario: ");
-             String usuario = sc.nextLine();
+             System.out.print("introduce el usuario: ");
+             String usuario = sc.nextLine().toLowerCase();
              System.out.print("Introduce la contraseña: ");
-             String contrasenya = sc.nextLine();
+             String contrasenya = sc.nextLine().toLowerCase();
 
              if (contrasenya_correcta.equals(contrasenya) && usuario_correcto.equals(usuario)) {
                  acceso = true;
+                 break;
 
              }else  {
                  acceso = false;
@@ -59,12 +60,16 @@ public class App {
  }
  public void menuSeleccionarOpcion(){
 
-     System.out.print("1. Crear cuenta");
+     System.out.println("** Bienvenido a DAW STOCK MANAGEMENT **");
+     System.out.println("---------------------------------------");
+     System.out.println("cuentas administradas " +  cuentas.size());
+     System.out.println("---------------------------------------");
+     System.out.println("1. Crear cuenta");
      System.out.println("2. Consultar cuentas");
      System.out.println("3. Consultar transacciones");
      System.out.println("4. Realizar transacciones");
      System.out.println("5. Salir");
-     System.out.println("Elige una opción: ");
+     System.out.print("Elige una opción: ");
      int opcion = sc.nextInt();
 
     switch (opcion) {
@@ -88,15 +93,33 @@ public class App {
 
  public void crearCuenta(){
      System.out.println("-- ALTA DE CUENTA --");
-     System.out.println("DNI del ressponsable: ");
-     String dni_responsable = sc.next();
-     System.out.println("Departamento: ");
-     String departamento = sc.next();
+     System.out.print("DNI del responsable: ");
+     String dni= sc.next().toLowerCase().trim();
 
+     //validar formato dni
+     if (dni.matches("[0-9]{8}[A-Z]")){
+         System.out.println("El DNI es correcto");
+     }else {
+         System.out.println("El DNI es incorrecto");
+     }
+
+     // buscar dni dentro de cada cuenta
+     for ( Cuenta cuenta : cuentas ) {
+        if (cuenta.getDniResponsale().equals(dni)) {
+            System.out.println("El dni existe");
+            return;
+        }
+     }
+
+     System.out.println("Departamento: ");
+     String departamento = sc.next().toLowerCase().trim();
+     try {
+
+     }
  }
  public void consultarCuenta(){
      System.out.println("Introduce DNI o código de cuenta: ");
-     String dni = sc.next();
+     String dni = sc.next().toLowerCase().trim();
  }
  public void consultarTransacciones(){
 

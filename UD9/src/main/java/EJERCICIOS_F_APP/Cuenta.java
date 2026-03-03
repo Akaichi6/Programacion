@@ -7,8 +7,8 @@ public class Cuenta {
     private double saldo;
     private Transaccion transacciones;
 
-    public Cuenta(String codigo, Departamento dpto) {
-        this.codigo = codigo;
+    public Cuenta(String dniResponsale, Departamento dpto) {
+        this.codigo = dniResponsale;
         this.dpto = dpto;
     }
 
@@ -57,4 +57,10 @@ public class Cuenta {
 
     public void baja(String hp) {
     }
+
+    public String getDniResponsable() {
+
+        return "";
+    }
+
 }

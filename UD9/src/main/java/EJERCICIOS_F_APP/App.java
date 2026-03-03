@@ -106,21 +106,40 @@ public class App {
      // buscar dni dentro de cada cuenta
      for ( Cuenta cuenta : cuentas ) {
         if (cuenta.getDniResponsale().equals(dni)) {
-            System.out.println("El dni existe");
+            System.out.println("ya exisite una cuenta asociada a ese dni");
             return;
         }
      }
 
      System.out.println("Departamento: ");
      String departamento = sc.next().toLowerCase().trim();
-     try {
 
-     }
+
+      Departamento dpto;
+      try {
+          dpto = Departamento.valueOf(departamento);
+      }
+      catch (IllegalArgumentException e) {
+          System.out.println("El departamento es incorrecto");
+          return;
+      }
+      try{
+          Cuenta cuenta = new Cuenta(dni, Departamento.valueOf(departamento));
+          cuentas.add(cuenta);
+          System.out.println("cuenta " + cuenta.getCodigo() + " creada correctamente");
+      }catch (Exception e){
+          System.out.println("Error al crear la cuenta" + e.getMessage());
+      }
+
  }
  public void consultarCuenta(){
-     System.out.println("Introduce DNI o código de cuenta: ");
-     String dni = sc.next().toLowerCase().trim();
+     System.out.println("-------------------------");
+     Cuenta cuenta = buscarCuenta();
+     if (cuenta != null) {
+         return;
+     }
  }
+
  public void consultarTransacciones(){
 
      System.out.println("Introduce DNI o codigo de cuenta: ");
@@ -135,5 +154,16 @@ public class App {
      System.out.println("Saliendo");
   }
 
-
+private Cuenta buscarCuenta() {
+    System.out.print("Introduce DNI o código de cuenta: ");
+    String busqueda = sc.nextLine().trim();
+    for (Cuenta c : cuentas) {
+        if (c.getDniResponsable().equalsIgnoreCase(busqueda)
+                || c.getCodigo().equalsIgnoreCase(busqueda)) {
+            return c;
+        }
+    }
+    System.out.println("Criterios de búsqueda incorrectos");
+    return null;
+}
 }

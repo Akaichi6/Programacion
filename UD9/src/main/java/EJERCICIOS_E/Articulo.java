@@ -86,7 +86,7 @@ public class Articulo {
     public boolean comprar (){
         Scanner sc = new Scanner(System.in);
         boolean resultado_C = true;
-        System.out.println("Unidades compradas:: ");
+        System.out.println("Unidades compradas: ");
         int unidades_compradas = sc.nextInt();
         cuantosQuedan = cuantosQuedan + unidades_compradas;
         if (unidades_compradas <= 0) {

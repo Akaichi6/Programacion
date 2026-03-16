@@ -1,6 +1,6 @@
 package EJERCICIO_1;
 
-public class Vehiculo {
+public class Vehiculo implements Comparable{
     // atributos
     protected String marca;
     protected String modelo;
@@ -59,5 +59,10 @@ public class Vehiculo {
        return "Marca: " + marca + "" +
                "\nModelo: " + modelo +"" +
                "\nVelocidad Actual: " + velocidadActual + "";
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        return 0;
     }
 }

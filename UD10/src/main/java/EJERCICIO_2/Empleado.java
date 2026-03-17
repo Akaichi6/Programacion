@@ -8,17 +8,6 @@ public abstract class Empleado {
         this.nombre = nombre;
         this.salarioBase = salarioBase;
     }
-
-    public abstract double calcularSalario ();
-
-    public void mostrarInfo(){
-        System.out.println("Nombre: " + nombre);
-        System.out.println("Salario Base: " + salarioBase);
-        System.out.println("Salario: " + calcularSalario());
-
-
-    }
-
     public String getNombre() {
         return nombre;
     }
@@ -34,4 +23,14 @@ public abstract class Empleado {
     public void setSalarioBase(double salarioBase) {
         this.salarioBase = salarioBase;
     }
+
+    public abstract double calcularSalario ();
+
+    public void mostrarInfo(){
+        System.out.println("Nombre: " + nombre);
+        System.out.println("Salario Base: " + salarioBase);
+        System.out.println("Salario: " + calcularSalario());
+    }
+
+
 }

@@ -1,4 +1,5 @@
 package EJERCICIO_3;
 
-public class EstadoEnvio {
+public enum EstadoEnvio {
+  PENDIENTE,EN_REPARTO,ENTREGADO
 }

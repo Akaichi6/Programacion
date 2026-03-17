@@ -1,13 +1,15 @@
 package EJERCICIO_2;
 
 public abstract class Empleado {
+    //ATRIBUTOS
     protected String nombre;
     protected double salarioBase;
-
+    //CONSTRUCTORES
     public Empleado(String nombre, double salarioBase) {
         this.nombre = nombre;
         this.salarioBase = salarioBase;
     }
+    //GETTERS SETTERS
     public String getNombre() {
         return nombre;
     }
@@ -23,7 +25,7 @@ public abstract class Empleado {
     public void setSalarioBase(double salarioBase) {
         this.salarioBase = salarioBase;
     }
-
+    //METODOS Y FUNCICONES
     public abstract double calcularSalario ();
 
     public void mostrarInfo(){

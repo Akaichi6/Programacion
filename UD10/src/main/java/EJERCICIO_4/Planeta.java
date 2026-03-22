@@ -67,7 +67,5 @@ public class Planeta extends Astro {
                 System.out.println("\t" + s.getNombre());
             }
         }
-
-
     }
 }

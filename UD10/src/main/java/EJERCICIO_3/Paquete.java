@@ -2,7 +2,7 @@ package EJERCICIO_3;
 
 import java.time.LocalDate;
 
-public abstract class Paquete {
+public class Paquete {
     private int identificador;
     double peso;
     private static LocalDate fecha_estimada;

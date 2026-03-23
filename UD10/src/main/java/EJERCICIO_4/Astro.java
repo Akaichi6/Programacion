@@ -18,7 +18,7 @@ public abstract class Astro {
         if  (rotacion <= 0) {
             throw new IllegalArgumentException("El rotacion debe de estar entre 0 e 360 grados");
         }
-        if  (masa <= 0) {
+        if  (masa < 0) {
             throw new IllegalArgumentException("El masa debe ser mayor o igual a 0 ");
         }
 

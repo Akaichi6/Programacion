@@ -23,7 +23,7 @@ public class Planeta extends Astro {
         this.distanciaAlSol = distanciaAlSol;
         this.orvitaAlSol = orvitaAlSol;
         this.tieneSatelites = false;
-        this.satelites = satelites;
+        this.satelites = new ArrayList<>();
     }
 
     public double getDistanciaAlSol() {

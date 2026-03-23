@@ -18,11 +18,11 @@ public class AstrosPrincipal {
         int opcion;
         do {
             System.out.print("------menú--------" +
-                    "1. Crear planeta." +
-                    "2. Crear satélite." +
-                    "3. Mostrar." +
-                    "0. Salir");
-            System.out.print("Introduce una opcion: ");
+                    "\n1. Crear planeta." +
+                    "\n2. Crear satélite." +
+                    "\n3. Mostrar." +
+                    "\n0. Salir");
+            System.out.print("\nIntroduce una opcion: ");
             opcion = sc.nextInt();
             switch (opcion) {
                 case 1:

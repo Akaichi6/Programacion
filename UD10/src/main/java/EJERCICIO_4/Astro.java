@@ -8,7 +8,20 @@ public abstract class Astro {
     protected double temperaturaMedia;
     protected double gravedad;
 
-    public Astro(String nombre, double raio, double rotacion, double masa, double gravedad, double temperaturaMedia) {
+    public Astro(String nombre, double radio, double rotacion, double masa, double gravedad, double temperaturaMedia) {
+        if (nombre == null) {
+            throw new IllegalArgumentException("El nombre es obligatorio");
+        }
+        if  (radio <= 0) {
+            throw new IllegalArgumentException("El radio debe ser mayor o igual a 0 ");
+        }
+        if  (rotacion <= 0) {
+            throw new IllegalArgumentException("El rotacion debe de estar entre 0 e 360 grados");
+        }
+        if  (masa <= 0) {
+            throw new IllegalArgumentException("El masa debe ser mayor o igual a 0 ");
+        }
+
         this.nombre = nombre;
         this.radio = radio;
         this.rotacion = rotacion;

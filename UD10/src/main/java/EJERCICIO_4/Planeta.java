@@ -9,8 +9,21 @@ public class Planeta extends Astro {
     private ArrayList<Satelite>  satelites;
 
 //constructor
-    public Planeta(String nombre, double radio, double rotacion, double masa, double gravedad, double temperaturaMedia) {
-        super(nombre, radio, rotacion, masa, gravedad, temperaturaMedia);
+
+    public Planeta(String nombre, double raio, double rotacion, double masa, double gravedad, double temperaturaMedia, double distanciaAlSol, double orvitaAlSol) {
+        super(nombre, raio, rotacion, masa, gravedad, temperaturaMedia);
+
+        if (distanciaAlSol < 0){
+            throw new IllegalArgumentException("El distancia al sol debe ser mayor que 0");
+        }
+        if  (orvitaAlSol < 0){
+            throw new IllegalArgumentException("El orvita al sol debe ser mayor que 0 Km");
+        }
+
+        this.distanciaAlSol = distanciaAlSol;
+        this.orvitaAlSol = orvitaAlSol;
+        this.tieneSatelites = false;
+        this.satelites = satelites;
     }
 
     public double getDistanciaAlSol() {
@@ -46,10 +59,7 @@ public class Planeta extends Astro {
     }
 
 // metodos
-    public void añadirSatelite(Satelite s) {
-        satelites.add(s);
-        tieneSatelites = true;
-    }
+
     @Override
     public void muestra() {
         System.out.println("--Planeta--");
@@ -62,10 +72,15 @@ public class Planeta extends Astro {
         System.out.println("Temperatura: " + temperaturaMedia + "ºC");
         System.out.println("Distancia alsol: " + distanciaAlSol + "Km");
         System.out.println("Tiene Satelites: " + tieneSatelites);
+
         if (tieneSatelites == true) {
             for (Satelite s : satelites) {
                 System.out.println("\t" + s.getNombre());
             }
         }
+    }
+    public void anyadirSatelite(Satelite s) {
+        satelites.add(s);
+        tieneSatelites = true;
     }
 }

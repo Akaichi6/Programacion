@@ -16,11 +16,8 @@ public class JefeEquipo extends Empleado implements TrabajadorRemoro {
     public double calcularSalario() {
         return salarioBase + (salarioBase * 0.25);
     }
-
     @Override
-    public void conectarVPN() {
-
-    }
+    public void conectarVPN() {}
 
     @Override
     public void desconectarVPN(){

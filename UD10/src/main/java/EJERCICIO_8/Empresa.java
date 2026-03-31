@@ -15,7 +15,6 @@ public class Empresa {
     public String getNombre() { return nombre; }
     public ArrayList<Empleado> getEmpleados() { return empleados; }
 
-    // Añade un empleado a la lista
     public void añadirEmpleado(Empleado e) {
         empleados.add(e);
     }

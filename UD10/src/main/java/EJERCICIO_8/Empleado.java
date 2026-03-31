@@ -17,10 +17,7 @@ public abstract class Empleado {
         this.salarioBase = salarioBase;
     }
 
-    public Empleado() {
-
-    }
-
+    public Empleado() {}
 
     public String getNombre() {
         return nombre;
@@ -48,8 +45,6 @@ public abstract class Empleado {
 
     public abstract double calcularSalario();
 
-
-
     public void mostrarIformacion (){
         System.out.println("Nombre: " + nombre);
         System.out.println("Salario con bono: " + calcularSalario() + "€");
@@ -59,8 +54,6 @@ public abstract class Empleado {
         }else  {
             System.out.println("No tiene dispositivo");
         }
-
-
     }
     @Override
     public String toString() {

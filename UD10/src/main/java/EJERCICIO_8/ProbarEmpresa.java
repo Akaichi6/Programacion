@@ -14,10 +14,8 @@ public class ProbarEmpresa {
         JefeEquipo carlos   = new JefeEquipo("Carlos", portatil2, 3000.0);
         Programador luis    = new Programador("Luis",     2000.0);
 
-
-
-        pedro.conectarVPN();  // Pedro conectado
-        carlos.conectarVPN(); // Carlos conectado
+        pedro.conectarVPN();
+        carlos.conectarVPN();
 
         portatil1.encender();
         movil1.encender();
@@ -27,7 +25,6 @@ public class ProbarEmpresa {
         empresa.añadirEmpleado(pedro);
         empresa.añadirEmpleado(carlos);
         empresa.añadirEmpleado(luis);
-
 
         System.out.println(" EMPLEADOS DE " + empresa.getNombre() + "\n");
         mostrarTodosLosEmpleados(empresa.getEmpleados());

@@ -6,7 +6,7 @@ public class ComparaSalario implements Comparator {
 
     @Override
     public int compare(Object obj1, Object obj2) {
-        // Casting para poder usar getSalarioBase()
+
         Empleado e1 = (Empleado) obj1;
         Empleado e2 = (Empleado) obj2;
 

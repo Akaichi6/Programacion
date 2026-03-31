@@ -2,7 +2,6 @@ package EJERCICIO_8;
 
 public class Portatil implements Dispositivo {
 
-    // Enumerado: solo puede tener estos dos valores
     public enum Estado {
         encendido, apagado
     }

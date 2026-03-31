@@ -21,7 +21,7 @@ public class Programador extends Empleado implements TrabajadorRemoro {
         this.estadoVPN = estadoVPN;
     }
 
-    // Bono del 10%
+
     @Override
     public double calcularSalario() {
         return salarioBase + (salarioBase * 0.10);

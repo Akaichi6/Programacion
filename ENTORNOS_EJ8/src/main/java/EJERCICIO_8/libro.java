@@ -8,22 +8,17 @@ public class libro {
     private boolean disponible;
     private categoria categoria;
 
-    public libro(String isbn, String titulo, String autor, int anioPublicacion, boolean disponible, categoria categoria) {
+    public libro(String isbn, String titulo, String autor, int anioPublicacion, categoria categoria) {
         if (titulo == null || titulo.isEmpty()) {
             throw new IllegalArgumentException("El campo titulo es obligatorio");
         }
         if (autor == null || autor.isEmpty()) {
             throw new IllegalArgumentException("El campo autor es obligatorio");
         }
-        if (anioPublicacion < 1800 || anioPublicacion > 2026) {
-            throw new IllegalArgumentException("El campo anio debe de estar entre 1800 y 2026");
-        }
         if (isbn == null || isbn.isEmpty()) {
             throw new IllegalArgumentException("El campo isbn es obligatorio");
         }
-        if (isbn.length() != 13) {
-            throw new IllegalArgumentException("El isbn debe de tener 13 caracteres numéricos");
-        }
+
         this.isbn = isbn;
         this.titulo = titulo;
         this.autor = autor;

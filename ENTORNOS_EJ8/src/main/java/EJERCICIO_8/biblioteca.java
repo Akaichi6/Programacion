@@ -1,7 +1,7 @@
 package EJERCICIO_8;
 
-import java.awt.*;
 import java.util.ArrayList;
+import java.util.List;
 
 public class biblioteca {
     private String nombre;
@@ -9,7 +9,7 @@ public class biblioteca {
     private ArrayList<categoria> categoria;
     private ArrayList<libro> catalogo;
 
-    public biblioteca(String nombre, String direccion, ArrayList<categoria> categoria) {
+    public biblioteca(String nombre, String direccion) {
         this.nombre = nombre;
         this.direccion = direccion;
         this.categoria = new ArrayList<>();
@@ -51,4 +51,50 @@ public class biblioteca {
         libro.getCategoria().agregarLibro(libro);
         System.out.println("Libro registrado: " + libro.getTitulo());
     }
+    public void listarLibros(){
+        for (libro l : catalogo){
+            System.out.println("Libro: " + l.getTitulo()  + " - " + l.getAutor() + l.getAnioPublicacion());
+        }
+    }
+    public void listarCategorias(){
+        for (categoria c : categoria){
+            System.out.println("-" + c.getNombre());
+        }
+    }
+    public ArrayList<libro> buscarPorTitulo (String texto){
+       ArrayList<libro> resultado = new ArrayList<>();
+        for (libro l : catalogo){
+            if (l.getTitulo().toLowerCase().contains(texto.toLowerCase())){
+                resultado.add(l);
+            }
+        }
+        return resultado;
+    }
+public List<libro> buscarPorCategoria (String nombreCategoria) {
+    List<libro> resultado = new ArrayList<>();
+        for (libro l : catalogo) {
+            if (l.getAutor().toLowerCase().contains(nombreCategoria.toLowerCase())) {
+                resultado.add(l);
+            }
+        }
+        return resultado;
+    }
+    public List<libro> buscarDisponibles(){
+        List<libro> resultado = new ArrayList<>();
+        for (libro l : catalogo){
+            if (l.isDisponible()){
+                resultado.add(l);
+            }
+        }
+        return resultado;
+    }
+
+    public void registrarCategoria(categoria categoria) {
+        categoria.add(categoria);
+        System.out.println("Categoria registrada: " + categoria.getNombre());
+
+
+    }
 }
+
+

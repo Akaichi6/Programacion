@@ -8,7 +8,7 @@ public class categoria {
     private String descripcion;
     private ArrayList<libro>libros;
 
-    public categoria(String id, String nombre, String descripcion, ArrayList<libro> libros) {
+    public categoria(String id, String nombre, String descripcion) {
         this.id = id;
         this.nombre = nombre;
         this.descripcion = descripcion;
@@ -59,5 +59,9 @@ public class categoria {
     }
     public void totalLibros(){
         System.out.println("Total libros: " + libros.size());
+    }
+
+    public void add(categoria categoria) {
+
     }
 }

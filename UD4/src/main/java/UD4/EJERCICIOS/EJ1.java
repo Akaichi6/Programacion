@@ -17,7 +17,5 @@ public class EJ1 {
 
         System.out.printf("Usando Printf\n");
         System.out.printf("El año tiene: %1$,d horas \nEl año tiene: %2$,d minutos\nEl año tiene: %3$,d segundos ", horasanu, minutosanu, segundosanu);
-
-
     }
 }

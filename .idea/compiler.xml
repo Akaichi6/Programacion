@@ -14,6 +14,7 @@
         <module name="UD7" />
         <module name="UD10" />
         <module name="UD9" />
+        <module name="UD100_recuperaciones" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
